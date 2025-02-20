@@ -10,8 +10,6 @@ def find_files(directory, filename):
                 files_to_search.append(os.path.join(root, file))
             total_files += 1
 
-    print("Finding...")
-
     for index, file_path in enumerate(files_to_search, 1):
         print(f"Found: {file_path}")
 
@@ -24,8 +22,4 @@ def find_files(directory, filename):
             print(f"Error reading {file_path}: {e}")
         
         break  
-        
-        if index % 10 == 0: 
-            print(f"Finding... ({index}/{total_files})")
-
 find_files('C:\\', 'flag')
